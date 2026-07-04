@@ -1,0 +1,6 @@
+local_vpc_name = "my-prod-vpc"
+local_subnet_name = "my-prod-subnet"
+local_subnet_cidr = "10.9.0.0/16"
+local_vm_name = "my-prod-vm"
+local_machine_type = "e2-medium"
+local_zone = "us-central1-a"
