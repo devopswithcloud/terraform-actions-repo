@@ -17,6 +17,9 @@ on:
                 type: choice
                 options: [validate, plan, apply, destroy]
                 required: true
+permissions: 
+    id-token: write
+    contents: read
 env: 
     GCS_BUCKET: my-second-project-499702-tfstate
 jobs:
