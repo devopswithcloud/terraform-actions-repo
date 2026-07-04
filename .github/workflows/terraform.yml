@@ -1,0 +1,25 @@
+name: Terraform GCP Pipeline 
+on: 
+    workflow_dispatch:
+        inputs:
+            environment:
+                description: 'Environement to Deploy'
+                type: choice
+                options:
+                    - dev
+                    - test
+                    - stage
+                    - prod
+                required: true
+
+            action:
+                description: 'Terraform action to perform'
+                type: choice
+                options: [validate, plan, apply, destroy]
+                required: true
+jobs:
+    terraform:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Dummy Step
+              run: echo "This is a dummy step to ensure the workflow runs."
